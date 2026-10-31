@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="MGZOR TWEAKS — პროფესიონალური PC ოპტიმიზაცია მეტი FPS-ისთვის, ნაკლები ლაგისა და გლუვი Gaming გამოცდილებისთვის.">
+  <title>MGZOR TWEAKS — PC Optimization</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080b12;--panel:#0e1420;--panel2:#111a2a;--text:#f4f7fc;--muted:#9aa8bd;--blue:#3185ff;--blue2:#65a5ff;--line:rgba(145,174,215,.14);--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Noto Sans Georgian",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(8,11,18,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.navin{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:1.4px;font-size:19px}.brand span{color:var(--blue2)}.links{display:flex;gap:30px;color:#c1ccdc;font-size:13px}.links a:hover{color:white}.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:12px 19px;font-weight:700;font-size:13px;transition:.2s}.navcta,.primary{background:var(--blue);color:white;box-shadow:0 8px 30px rgba(49,133,255,.2)}.navcta:hover,.primary:hover{background:#4a96ff;transform:translateY(-2px)}.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:8px;padding:8px 11px;font-size:20px}
+    .hero{position:relative;overflow:hidden;padding:112px 0 100px;background:radial-gradient(ellipse at 78% 25%,rgba(32,111,238,.19),transparent 38%),radial-gradient(ellipse at 15% 80%,rgba(25,74,150,.12),transparent 34%)}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(rgba(120,160,220,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(120,160,220,.12) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(to bottom,black,transparent 85%)}.hero .wrap{position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue2);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--blue2);box-shadow:0 0 14px var(--blue)}h1{font-size:clamp(42px,7vw,76px);line-height:1.08;letter-spacing:-2.8px;margin:22px 0;max-width:850px;font-weight:900}h1 span{color:var(--blue2)}.lead{max-width:650px;color:var(--muted);font-size:17px;margin:0 0 32px}.actions{display:flex;gap:12px;flex-wrap:wrap}.secondary{border:1px solid rgba(160,190,230,.25);color:#e8eef8;background:rgba(255,255,255,.025)}.secondary:hover{border-color:var(--blue2);background:rgba(49,133,255,.08)}.stats{display:flex;gap:44px;margin-top:70px;flex-wrap:wrap}.stat strong{display:block;font-size:22px}.stat small{color:var(--muted);font-size:11px;letter-spacing:.5px}
+    section{padding:88px 0}.section-head{max-width:650px;margin-bottom:38px}.kicker{font-size:11px;letter-spacing:2px;color:var(--blue2);font-weight:800;text-transform:uppercase}.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.2;letter-spacing:-1.2px;margin:10px 0 12px}.section-head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:linear-gradient(145deg,rgba(19,29,46,.92),rgba(12,17,27,.96));border:1px solid var(--line);border-radius:15px;padding:27px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;top:0;left:25px;right:25px;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:.7}.icon{width:42px;height:42px;border-radius:11px;background:rgba(49,133,255,.12);display:grid;place-items:center;color:var(--blue2);font-size:19px;margin-bottom:20px}.card h3{font-size:19px;margin:0 0 10px}.card p{color:var(--muted);font-size:13px;margin:0}.price{font-size:35px;font-weight:900;letter-spacing:-1px;margin:19px 0 3px}.price small{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0}.tag{display:inline-block;color:var(--blue2);background:rgba(49,133,255,.1);border:1px solid rgba(49,133,255,.2);padding:4px 9px;border-radius:30px;font-size:10px;font-weight:800;letter-spacing:1px}.features{list-style:none;padding:17px 0 0;margin:17px 0 22px;border-top:1px solid var(--line)}.features li{font-size:12px;color:#c4cede;margin:10px 0}.features li:before{content:"✓";color:var(--blue2);font-weight:900;margin-right:9px}.card .btn{width:100%}.popular{border-color:rgba(49,133,255,.55);box-shadow:0 15px 55px rgba(20,85,180,.12);transform:translateY(-7px)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.visual{min-height:340px;border:1px solid var(--line);border-radius:18px;background:radial-gradient(circle at 70% 30%,rgba(49,133,255,.22),transparent 35%),linear-gradient(145deg,#101b2d,#090e17);display:grid;place-items:center;position:relative;overflow:hidden}.visual:before,.visual:after{content:"";position:absolute;border:1px solid rgba(93,157,255,.2);border-radius:50%;width:260px;height:260px}.visual:after{width:350px;height:350px}.monitor{z-index:1;border:1px solid rgba(130,180,255,.45);background:#080d16;border-radius:10px;padding:18px;width:68%;box-shadow:0 20px 70px #000}.monitor-top{height:8px;width:45%;background:var(--blue);border-radius:5px;margin-bottom:18px}.bars{display:grid;gap:9px}.bar{height:9px;background:#1b2a41;border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#1764d9,#6db0ff);border-radius:8px}.monitor-label{font-size:10px;color:#9db6d9;margin-top:15px;letter-spacing:1.4px}.steps{display:grid;gap:20px}.step{display:flex;gap:16px}.num{flex:0 0 36px;height:36px;border:1px solid rgba(49,133,255,.45);border-radius:10px;display:grid;place-items:center;color:var(--blue2);font-weight:800;font-size:12px}.step h3{font-size:15px;margin:0 0 4px}.step p{font-size:12px;color:var(--muted);margin:0}
+    .banner{border:1px solid rgba(49,133,255,.25);border-radius:18px;padding:42px;background:radial-gradient(ellipse at 85% 50%,rgba(49,133,255,.18),transparent 45%),#0d1421;display:flex;justify-content:space-between;align-items:center;gap:25px}.banner h2{font-size:clamp(25px,4vw,38px);line-height:1.2;margin:0 0 9px}.banner p{color:var(--muted);margin:0;font-size:13px}.faq{display:grid;grid-template-columns:1fr 1fr;gap:13px}.faq article{padding:21px;border:1px solid var(--line);background:var(--panel);border-radius:12px}.faq h3{font-size:14px;margin:0 0 8px}.faq p{font-size:12px;color:var(--muted);margin:0}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}.foot strong{color:white;letter-spacing:1px}.social{color:var(--blue2)}
+    @media(max-width:800px){.links{display:none;position:absolute;top:78px;left:0;right:0;background:#0b111c;padding:20px;flex-direction:column;gap:17px;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.navcta{display:none}.cards{grid-template-columns:1fr}.popular{transform:none}.split{grid-template-columns:1fr;gap:30px}.visual{min-height:270px}.banner{align-items:flex-start;flex-direction:column}.hero{padding:83px 0 70px}.stats{gap:25px;margin-top:50px}section{padding:68px 0}.faq{grid-template-columns:1fr}}
+    @media(max-width:480px){.wrap{width:min(var(--max),calc(100% - 30px))}.navin{height:68px}.links{top:68px}h1{letter-spacing:-1.7px}.lead{font-size:15px}.card{padding:23px}.banner{padding:28px}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#home">MGZOR<span>.</span> TWEAKS</a>
+      <nav class="links" id="navlinks">
+        <a href="#services">სერვისები</a><a href="#process">როგორ მუშაობს</a><a href="#faq">FAQ</a><a href="#contact">კონტაქტი</a>
+      </nav>
+      <a class="navcta" href="https://instagram.com/mgzor.tweaks" target="_blank" rel="noopener">მოგვწერე Instagram-ზე ↗</a>
+      <button class="menu" id="menu" aria-label="მენიუს გახსნა">☰</button>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div class="eyebrow"><span class="dot"></span> PC OPTIMIZATION SERVICE</div>
+        <h1>მეტი FPS.<br><span>ნაკლები ლაგი.</span><br>სრული კონტროლი.</h1>
+        <p class="lead">გააუმჯობესე შენი PC-ის წარმადობა პროფესიონალური Windows-ის, NVIDIA-სა და თამაშის ინდივიდუალური ოპტიმიზაციით.</p>
+        <div class="actions">
+          <a class="btn primary" href="#services">ნახე პაკეტები <span style="margin-left:9px">→</span></a>
+          <a class="btn secondary" href="https://instagram.com/mgzor.tweaks" target="_blank" rel="noopener">დაგვიკავშირდი</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>01 — 1</strong><small>ინდივიდუალური მიდგომა</small></div>
+          <div class="stat"><strong>PC</strong><small>Windows & NVIDIA tuning</small></div>
+          <div class="stat"><strong>FPS</strong><small>Gaming-ზე ორიენტირებული</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">ჩვენი პაკეტები</div><h2>აირჩიე შენი<br>ოპტიმიზაციის დონე.</h2><p>სამი პაკეტი სხვადასხვა საჭიროებისთვის — საწყისი გაუმჯობესებიდან სრულ Gaming Setup-მდე.</p></div>
+        <div class="cards">
+          <article class="card">
+            <div class="icon">⚙</div><span class="tag">STARTER</span><h3>Basic</h3><p>საჭირო სისტემური ცვლილებები ყოველდღიური და სათამაშო წარმადობის გასაუმჯობესებლად.</p>
+            <div class="price">$10 <small>/ ერთჯერადად</small></div>
+            <ul class="features"><li>Windows-ის საბაზისო ოპტიმიზაცია</li><li>NVIDIA Control Panel-ის გამართვა</li><li>აუცილებელი Performance Tweaks</li></ul>
+            <a class="btn secondary" href="https://instagram.com/mgzor.tweaks" target="_blank" rel="noopener">შეკვეთა Instagram-ზე</a>
+          </article>
+          <article class="card popular">
+            <div class="icon">⚡</div><span class="tag">POPULAR</span><h3>Advanced</h3><p>გაფართოებული ოპტიმიზაცია და ერთი კონკრეტული თამაშისთვის მორგებული პარამეტრები.</p>
+            <div class="price">$20 <small>/ ერთჯერადად</small></div>
+            <ul class="features"><li>Windows-ის გაფართოებული ოპტიმიზაცია</li><li>NVIDIA-ს დეტალური გამართვა</li><li>ერთი თამაშის ინდივიდუალური ოპტიმიზაცია</li><li>In-game Graphics / Performance Settings</li></ul>
+            <a class="btn primary" href="https://instagram.com/mgzor.tweaks" target="_blank" rel="noopener">შეკვეთა Instagram-ზე</a>
+          </article>
+          <article class="card">
+            <div class="icon">▣</div><span class="tag">COMPLETE SETUP</span><h3>Maximum</h3><p>სრული განახლება და Gaming გარემოს თავიდან ბოლომდე გამართვა.</p>
+            <div class="price">$40 <small>/ ერთჯერადად</small></div>
+            <ul class="features"><li>Windows-ის სუფთა ინსტალაცია</li><li>ინსტალაციის შემდგომი სრული ოპტიმიზაცია</li><li>Advanced NVIDIA Settings</li><li>Gaming Setup და Game Tweaks</li></ul>
+            <a class="btn secondary" href="https://instagram.com/mgzor.tweaks" target="_blank" rel="noopener">შეკვეთა Instagram-ზე</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap split">
+        <div>
+          <div class="section-head"><div class="kicker">მარტივი პროცესი</div><h2>შენი PC.<br>შენი საჭიროებები.</h2><p>ოპტიმიზაცია უნდა შეესაბამებოდეს კომპიუტერის კონფიგურაციას და იმ თამაშებს, რომლებსაც თამაშობ.</p></div>
+          <div class="steps">
+            <div class="step"><div class="num">01</div><div><h3>მოგვწერე Instagram-ზე</h3><p>გამოგვიგზავნე კომპიუტერის მონაცემები და გვითხარი, რა პრობლემას აწყდები.</p></div></div>
+            <div class="step"><div class="num">02</div><div><h3>შეარჩიე პაკეტი</h3><p>შენი სისტემისა და მიზნების მიხედვით შევარჩევთ შესაბამის მომსახურებას.</p></div></div>
+            <div class="step"><div class="num">03</div><div><h3>მიიღე ოპტიმიზაცია</h3><p>შევასრულებთ შეთანხმებულ ცვლილებებს და აგიხსნით შედეგებს.</p></div></div>
+          </div>
+        </div>
+        <div class="visual" aria-label="PC performance illustration"><div class="monitor"><div class="monitor-top"></div><div class="bars"><div class="bar"><i style="width:88%"></i></div><div class="bar"><i style="width:72%"></i></div><div class="bar"><i style="width:94%"></i></div><div class="bar"><i style="width:64%"></i></div></div><div class="monitor-label">SYSTEM PERFORMANCE / OPTIMIZED</div></div></div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">ხშირად დასმული კითხვები</div><h2>სანამ დაიწყებ.</h2></div>
+        <div class="faq">
+          <article><h3>ყველა კომპიუტერზე ერთნაირი შედეგია?</h3><p>არა. შედეგი დამოკიდებულია კომპონენტებზე, საწყის მდგომარეობასა და თამაშზე. წინასწარ განვიხილავთ შენს სისტემას.</p></article>
+          <article><h3>გარანტირებულია FPS-ის მატება?</h3><p>კონკრეტული FPS-ის მატების გარანტია შეუძლებელია. მიზანია სისტემის სწორად გამართვა და ზედმეტი შეფერხებების შემცირება.</p></article>
+          <article><h3>რომელი თამაშებისთვის აკეთებთ ოპტიმიზაციას?</h3><p>ძირითადი აქცენტი Gaming-ზეა. მოგვწერე შენი თამაში და კომპიუტერის მონაცემები, რომ შევაფასოთ შესაბამისი პაკეტი.</p></article>
+          <article><h3>როგორ შევუკვეთო?</h3><p>დააჭირე შეკვეთის ღილაკს და მოგვწერე Instagram-ზე: @mgzor.tweaks.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="banner"><div><div class="kicker">READY TO OPTIMIZE?</div><h2>დროა შენი PC-მ<br>მეტი შეძლოს.</h2><p>მოგვწერე და ერთად შევარჩიოთ სწორი ოპტიმიზაცია.</p></div><a class="btn primary" href="https://instagram.com/mgzor.tweaks" target="_blank" rel="noopener">DM @mgzor.tweaks ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap foot"><div><strong>MGZOR TWEAKS</strong><div>PC Optimization • Gaming Performance</div></div><div>© <span id="year"></span> MGZOR TWEAKS. ყველა უფლება დაცულია.</div><a class="social" href="https://instagram.com/mgzor.tweaks" target="_blank" rel="noopener">Instagram ↗</a></div></footer>
+  <script>
+    const menu=document.getElementById('menu'),links=document.getElementById('navlinks');
+    menu.addEventListener('click',()=>links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
