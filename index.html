@@ -94,18 +94,29 @@
     @media(max-width:480px){.container{width:calc(100% - 34px)}.logo{font-size:16px;gap:8px}.logo-mark{width:27px;height:27px}.nav-action{display:none}.hero{padding:79px 0 46px}.hero h1{font-size:clamp(37px,10.4vw,49px);letter-spacing:-1.6px}.hero-description{font-size:15px}.hero-art{height:320px}.system-card{max-width:294px;padding:16px}.orbit{width:290px}.orbit.two{width:230px}.hero-metrics{gap:21px}.metric strong{font-size:21px}.section{padding:65px 0}.section-head{margin-bottom:30px}.section-head h2,h2{letter-spacing:-.8px}.mini-card,.outcome-panel{padding:24px}.price-card{padding:26px 23px}.amount{font-size:46px}.game-chip{font-size:11px}.showcase{padding:15px;min-height:290px}.display{padding:17px}.cta-panel{padding:29px}.instagram-float{right:14px;bottom:14px;padding:12px}.instagram-float span{display:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
   
-    /* MGZOR SYSTEM — rebuilt interactive card animations */
-    .hero-art .system-card{--mx:50%;--my:50%;transform:rotate(-4deg);animation:none;transition:transform .22s ease-out,box-shadow .3s ease;transform-style:preserve-3d;will-change:transform;overflow:hidden;isolation:isolate}
-    .hero-art .system-card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.19),transparent 54%);z-index:0}
+    /* MGZOR / SYSTEM — matched to approved interactive preview */
+    .hero-art .system-card{--x:50%;--y:35%;width:min(100%,410px);padding:25px 25px 22px;border:1px solid #ffffff30;border-radius:25px;background:linear-gradient(145deg,#222226 0%,#0b0b0d 76%);box-shadow:0 30px 85px #000b,inset 0 1px #ffffff1c;transform:rotate(-4deg);animation:none;transition:transform .25s ease;transform-style:preserve-3d;overflow:hidden;isolation:isolate}
+    .hero-art .system-card::before{content:"";position:absolute;inset:-70%;background:radial-gradient(circle at var(--x) var(--y),#ffffff17,transparent 28%);pointer-events:none;z-index:0}
     .hero-art .system-card>*{position:relative;z-index:1}
-    .hero-art .system-card:hover{box-shadow:0 38px 105px #000c,0 0 38px #ffffff20,inset 0 1px 0 #ffffff40}
-    .hero-art .system-icon svg{display:block;transform-box:view-box;transform-origin:center;animation:systemSpin 9s linear infinite;filter:drop-shadow(0 0 18px #ffffff40)}
-    .hero-art .meter-fill{display:block!important;width:0!important;animation:systemMeter 1.5s cubic-bezier(.22,.8,.25,1) forwards;animation-delay:.35s}
-    .hero-art .meter:nth-of-type(5) .meter-fill{animation-delay:.65s}
-    .hero-art .meter:nth-of-type(6) .meter-fill{animation-delay:.95s}
-    @keyframes systemMeter{0%{width:0}100%{width:var(--meter-target)}}
-    @keyframes systemSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-    @media(prefers-reduced-motion:reduce){.hero-art .system-card{transition:none!important}.hero-art .system-icon svg{animation:none!important}.hero-art .meter-fill{animation:none!important;width:var(--meter-target)!important}}
+    .hero-art .system-top{font-weight:800;letter-spacing:.04em;padding-bottom:18px;border-bottom:1px solid #ffffff24}
+    .hero-art .system-pill{border-color:#ffffff40;padding:7px 11px;color:#c4c4cb}
+    .hero-art .system-icon{height:154px;margin:0;position:relative}
+    .hero-art .system-icon svg{width:110px;height:110px;display:block;transform-origin:center;animation:mgzorPreviewSpin 16s linear infinite;filter:drop-shadow(0 0 18px #ffffff38)}
+    .hero-art .system-meta{color:#8c8c97;letter-spacing:.2em;font-weight:900;margin:7px 0 15px}
+    .hero-art .meter{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;margin:14px 0;font-weight:800;font-size:12px}
+    .hero-art .meter b{font-weight:800}
+    .hero-art .meter-track{width:100%;height:5px;background:#3b3b41}
+    .hero-art .meter-fill{display:block!important;width:0!important;background:linear-gradient(90deg,#8b8b91,#fff);animation:mgzorPreviewGrow 1.6s cubic-bezier(.2,.8,.2,1) forwards}
+    .hero-art .meter:nth-of-type(4) .meter-fill{animation-delay:.35s}
+    .hero-art .meter:nth-of-type(5) .meter-fill{animation-delay:.55s}
+    .hero-art .meter:nth-of-type(6) .meter-fill{animation-delay:.75s}
+    .hero-art .system-note{border-color:#ffffff22;margin-top:23px;padding-top:15px;color:#8c8c96;font-size:10px}
+    .hero-art .system-note::before{content:"";display:inline-block;width:6px;height:6px;background:#fff;border-radius:50%;margin-right:6px;box-shadow:0 0 10px #fff;animation:mgzorPreviewPulse 2s ease-in-out infinite}
+    @keyframes mgzorPreviewGrow{to{width:var(--meter-target)}}
+    @keyframes mgzorPreviewSpin{to{transform:rotate(360deg)}}
+    @keyframes mgzorPreviewPulse{50%{opacity:.35;box-shadow:none}}
+    @media(hover:hover){.hero-art .system-card:hover{box-shadow:0 35px 95px #000e,0 0 40px #ffffff09}}
+    @media(prefers-reduced-motion:reduce){.hero-art .system-card{transition:none!important}.hero-art .system-icon svg,.hero-art .meter-fill,.hero-art .system-note::before{animation:none!important}.hero-art .meter-fill{width:var(--meter-target)!important}}
   </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
 </head>
@@ -240,23 +251,18 @@
         nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'მენიუს გახსნა'); menu.textContent = '☰';
       }));
       document.getElementById('year').textContent = new Date().getFullYear();
-      // Mouse-only tilt for the MGZOR / SYSTEM card; no effect on other sections.
+      // MGZOR / SYSTEM: same mouse tracking as the approved preview.
       const systemCard = document.querySelector('.hero-art .system-card');
-      if (systemCard && window.matchMedia('(hover:hover) and (pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (systemCard && matchMedia('(hover:hover) and (pointer:fine)').matches && !matchMedia('(prefers-reduced-motion:reduce)').matches) {
         systemCard.addEventListener('pointermove', e => {
           const r = systemCard.getBoundingClientRect();
           const x = (e.clientX-r.left)/r.width, y = (e.clientY-r.top)/r.height;
-          systemCard.style.setProperty('--mx', (x*100).toFixed(1)+'%');
-          systemCard.style.setProperty('--my', (y*100).toFixed(1)+'%');
-          systemCard.style.transform = 'rotate(-4deg) rotateX('+((.5-y)*15).toFixed(2)+'deg) rotateY('+((x-.5)*17).toFixed(2)+'deg) scale(1.025)';
+          systemCard.style.transform = 'rotateX('+((.5-y)*11)+'deg) rotateY('+((x-.5)*13)+'deg) rotate(-2deg)';
+          systemCard.style.setProperty('--x',x*100+'%');
+          systemCard.style.setProperty('--y',y*100+'%');
         });
-        systemCard.addEventListener('pointerleave', () => {
-          systemCard.style.transform = '';
-          systemCard.style.setProperty('--mx','50%');
-          systemCard.style.setProperty('--my','50%');
-        });
+        systemCard.addEventListener('pointerleave', () => { systemCard.style.transform = 'rotate(-4deg)'; });
       }
-
       const els = document.querySelectorAll('.reveal');
       if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         const observer = new IntersectionObserver((entries, obs) => {
