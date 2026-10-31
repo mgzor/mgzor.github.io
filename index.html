@@ -94,20 +94,18 @@
     @media(max-width:480px){.container{width:calc(100% - 34px)}.logo{font-size:16px;gap:8px}.logo-mark{width:27px;height:27px}.nav-action{display:none}.hero{padding:79px 0 46px}.hero h1{font-size:clamp(37px,10.4vw,49px);letter-spacing:-1.6px}.hero-description{font-size:15px}.hero-art{height:320px}.system-card{max-width:294px;padding:16px}.orbit{width:290px}.orbit.two{width:230px}.hero-metrics{gap:21px}.metric strong{font-size:21px}.section{padding:65px 0}.section-head{margin-bottom:30px}.section-head h2,h2{letter-spacing:-.8px}.mini-card,.outcome-panel{padding:24px}.price-card{padding:26px 23px}.amount{font-size:46px}.game-chip{font-size:11px}.showcase{padding:15px;min-height:290px}.display{padding:17px}.cta-panel{padding:29px}.instagram-float{right:14px;bottom:14px;padding:12px}.instagram-float span{display:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
   
-    /* MGZOR SYSTEM — interactive hero card only */
-    .hero-art .system-card{--mx:50%;--my:50%;transform:rotate(-4deg) rotateX(0deg) rotateY(0deg);animation:systemEnter 1.1s cubic-bezier(.2,.8,.2,1) both;transition:transform .28s ease,box-shadow .3s ease;transform-style:preserve-3d;will-change:transform;overflow:hidden}
-    .hero-art .system-card::before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.13),transparent 47%);opacity:.85;z-index:0}
+    /* MGZOR SYSTEM — rebuilt interactive card animations */
+    .hero-art .system-card{--mx:50%;--my:50%;transform:rotate(-4deg);animation:none;transition:transform .22s ease-out,box-shadow .3s ease;transform-style:preserve-3d;will-change:transform;overflow:hidden;isolation:isolate}
+    .hero-art .system-card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.19),transparent 54%);z-index:0}
     .hero-art .system-card>*{position:relative;z-index:1}
-    .hero-art .system-card:hover{box-shadow:0 38px 105px #000c,0 0 32px #ffffff13,inset 0 1px 0 #ffffff30}
-    .hero-art .system-icon svg{animation:systemSpin 16s linear infinite;transform-origin:center;filter:drop-shadow(0 0 16px #ffffff30)}
-    .hero-art .meter-fill{width:0!important;transform-origin:left;animation:systemMeter 1.65s cubic-bezier(.22,.8,.25,1) forwards;animation-delay:.55s}
-    .hero-art .meter:nth-of-type(2) .meter-fill{animation-delay:.8s}
-    .hero-art .meter:nth-of-type(3) .meter-fill{animation-delay:1.05s}
-    .hero-art .meter:nth-of-type(4) .meter-fill{animation-delay:1.3s}
-    @keyframes systemMeter{from{width:0}to{width:var(--meter-target)}}
-    @keyframes systemSpin{to{transform:rotate(360deg)}}
-    @keyframes systemEnter{from{opacity:0;transform:translateY(28px) rotate(-7deg)}to{opacity:1;transform:rotate(-4deg)}}
-    @media(prefers-reduced-motion:reduce){.hero-art .system-card,.hero-art .system-icon svg,.hero-art .meter-fill{animation:none!important;transition:none!important}.hero-art .meter-fill{width:var(--meter-target)!important}}
+    .hero-art .system-card:hover{box-shadow:0 38px 105px #000c,0 0 38px #ffffff20,inset 0 1px 0 #ffffff40}
+    .hero-art .system-icon svg{display:block;transform-box:view-box;transform-origin:center;animation:systemSpin 9s linear infinite;filter:drop-shadow(0 0 18px #ffffff40)}
+    .hero-art .meter-fill{display:block!important;width:0!important;animation:systemMeter 1.5s cubic-bezier(.22,.8,.25,1) forwards;animation-delay:.35s}
+    .hero-art .meter:nth-of-type(5) .meter-fill{animation-delay:.65s}
+    .hero-art .meter:nth-of-type(6) .meter-fill{animation-delay:.95s}
+    @keyframes systemMeter{0%{width:0}100%{width:var(--meter-target)}}
+    @keyframes systemSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    @media(prefers-reduced-motion:reduce){.hero-art .system-card{transition:none!important}.hero-art .system-icon svg{animation:none!important}.hero-art .meter-fill{animation:none!important;width:var(--meter-target)!important}}
   </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
 </head>
@@ -250,7 +248,7 @@
           const x = (e.clientX-r.left)/r.width, y = (e.clientY-r.top)/r.height;
           systemCard.style.setProperty('--mx', (x*100).toFixed(1)+'%');
           systemCard.style.setProperty('--my', (y*100).toFixed(1)+'%');
-          systemCard.style.transform = 'rotate(-4deg) rotateX('+((.5-y)*9).toFixed(2)+'deg) rotateY('+((x-.5)*11).toFixed(2)+'deg)';
+          systemCard.style.transform = 'rotate(-4deg) rotateX('+((.5-y)*15).toFixed(2)+'deg) rotateY('+((x-.5)*17).toFixed(2)+'deg) scale(1.025)';
         });
         systemCard.addEventListener('pointerleave', () => {
           systemCard.style.transform = '';
