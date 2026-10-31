@@ -117,6 +117,31 @@
     @keyframes mgzorPreviewPulse{50%{opacity:.35;box-shadow:none}}
     @media(hover:hover){.hero-art .system-card:hover{box-shadow:0 35px 95px #000e,0 0 40px #ffffff09}}
     @media(prefers-reduced-motion:reduce){.hero-art .system-card{transition:none!important}.hero-art .system-icon svg,.hero-art .meter-fill,.hero-art .system-note::before{animation:none!important}.hero-art .meter-fill{width:var(--meter-target)!important}}
+  
+    /* Mobile-only fix for optimization card; desktop styles unchanged */
+    @media(max-width:800px){
+      .hero-art{height:auto;min-height:0;display:flex;align-items:center;justify-content:center;padding:24px 0 32px;perspective:none}
+      .hero-art .system-card{width:min(100%,345px);max-width:100%;height:auto;transform:none;padding:20px;flex:0 1 auto}
+      .hero-art .system-icon{height:116px}
+      .hero-art .system-icon svg{width:88px;height:88px}
+      .hero-art .system-top{padding-bottom:13px}
+      .hero-art .system-meta{margin:3px 0 10px}
+      .hero-art .meter{margin:10px 0;gap:12px}
+      .hero-art .system-note{margin-top:14px;padding-top:11px;line-height:1.5}
+      .hero-art .orbit,.hero-art .hero-halo{pointer-events:none}
+      .hero-metrics{margin-top:24px}
+    }
+    @media(max-width:480px){
+      .hero-art{padding:20px 0 26px}
+      .hero-art .system-card{width:min(100%,330px);padding:17px 16px;border-radius:20px}
+      .hero-art .system-top{gap:8px}
+      .hero-art .system-top strong{font-size:12px}
+      .hero-art .system-pill{font-size:9px;letter-spacing:.3px;padding:5px 7px}
+      .hero-art .meter{grid-template-columns:minmax(0,1fr) minmax(0,1fr);font-size:11px}
+      .hero-art .system-note{font-size:9px}
+      .hero-art .orbit{width:min(80vw,290px)}
+      .hero-art .orbit.two{width:min(65vw,230px)}
+    }
   </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
 </head>
