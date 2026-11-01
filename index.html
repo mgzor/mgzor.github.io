@@ -170,6 +170,11 @@
 #services .pricing-foot{position:relative;z-index:2}
 @media(max-width:800px){#services .pricing-intro{margin-bottom:-28px}#services .pricing-intro h2{font-size:clamp(42px,8.5vw,68px);letter-spacing:-2.5px}#services .price-grid{gap:20px}#services .pricing-intro>p{margin-bottom:24px!important;font-size:14px}}
 @media(max-width:480px){#services .pricing-intro h2{font-size:clamp(30px,8.2vw,42px);letter-spacing:-1.5px}#services .pricing-intro{margin-bottom:-16px}#services .price-card{padding-top:32px}}
+
+/* Clearer pricing glass keeps the background heading legible. */
+#services .price-card{background:linear-gradient(145deg,#ffffff05,#ffffff01 65%);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+#services .price-card.popular{background:linear-gradient(145deg,#ffffff09,#ffffff02 65%)}
+#services .price-card:hover{background:linear-gradient(145deg,#ffffff0a,#ffffff03 65%)}
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
 </head>
