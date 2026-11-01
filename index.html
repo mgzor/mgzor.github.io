@@ -142,7 +142,7 @@
       .hero-art .orbit{width:min(80vw,290px)}
       .hero-art .orbit.two{width:min(65vw,230px)}
     }
-  </style>
+  .language-switch{display:flex;flex-shrink:0;gap:2px;padding:4px;border:1px solid var(--line);border-radius:100px;background:#111113}.language-switch button{border:0;background:transparent;color:#a2a2aa;padding:7px 9px;border-radius:100px;font:700 12px Inter,sans-serif;cursor:pointer;min-height:32px}.language-switch button[aria-pressed="true"]{background:#f5f5f6;color:#09090b}.header-inner{gap:14px}.nav-links{gap:18px}html[lang="ru"] .hero h1,html[lang="en"] .hero h1{font-family:Inter,sans-serif;letter-spacing:-2px;font-size:clamp(38px,4.7vw,67px)}@media(max-width:1100px){.nav-action{display:none}}@media(max-width:480px){.header-inner{gap:8px}.logo img{width:125px!important;max-width:32vw!important}.language-switch{margin-left:auto}.language-switch button{padding:6px 7px}.menu-button{padding:7px 9px}html[lang="ru"] .hero h1,html[lang="en"] .hero h1{font-size:clamp(34px,9vw,46px);letter-spacing:-1.3px}}</style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
 </head>
 <body>
@@ -154,6 +154,7 @@
         <a href="#about">უპირატესობები</a><a href="#services">პაკეტები</a><a href="#process">პროცესი</a><a href="#faq">FAQ</a><a href="#contact">კონტაქტი</a>
       </nav>
       <a class="nav-action" href="https://www.instagram.com/mgzor.tweaks/" target="_blank" rel="noopener noreferrer">მოგვწერე ↗</a>
+      <div class="language-switch" role="group" aria-label="ენის არჩევა"><button type="button" data-language="ka" lang="ka" aria-label="ქართული" aria-pressed="true">KA</button><button type="button" data-language="ru" lang="ru" aria-label="Русский" aria-pressed="false">RU</button><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>
       <button type="button" class="menu-button" id="menu-button" aria-label="მენიუს გახსნა" aria-controls="nav-links" aria-expanded="false">☰</button>
     </div>
   </header>
@@ -297,5 +298,57 @@
       } else { els.forEach(el => el.classList.add('visible')); }
     })();
   </script>
+<script>
+(() => {
+ const entries=[["გადადი მთავარ შინაარსზე","Skip to content","Перейти к содержимому"],["უპირატესობები","Benefits","Преимущества"],["პაკეტები","Packages","Пакеты"],["პროცესი","Process","Процесс"],["კონტაქტი","Contact","Контакты"],["მოგვწერე ↗","Message us ↗","Написать нам ↗"],["მეტი FPS.","More FPS.","Больше FPS."],["ნაკლები ლაგი.","Less lag.","Меньше лагов."],["სრული კონტროლი.","Full control.","Полный контроль."],["გააუმჯობესე შენი PC-ის წარმადობა პროფესიონალური Windows-ის, NVIDIA-სა და თამაშის ინდივიდუალური ოპტიმიზაციით.","Improve your PC performance with professional Windows, NVIDIA and game optimization tailored to your system.","Повысь производительность ПК с помощью профессиональной настройки Windows, NVIDIA и игр под твою систему."],["დაიწყე ოპტიმიზაცია","Start optimizing","Начать оптимизацию"],["როგორ მუშაობს","How it works","Как это работает"],["ინდივიდუალური მიდგომა","Personal approach","Индивидуальный подход"],["Gaming-ზე ორიენტირებული","Built for gaming","Для гейминга"],["ყოველი დეტალი","Every detail","Каждая деталь"],["მნიშვნელოვანია.","matters.","имеет значение."],["გამართული Windows, სწორი ვიდეოკარტის პარამეტრები და კონკრეტულ თამაშზე მორგებული კონფიგურაცია — ერთიანი მიდგომა შენი სისტემისთვის.","A well-configured Windows system, graphics settings and game-specific tuning — one complete approach for your PC.","Настройка Windows, видеокарты и конфигурации конкретной игры — комплексный подход к твоей системе."],["სისტემის პარამეტრების გამართვა ზედმეტი დატვირთვისა და შეფერხებების შესამცირებლად.","System settings adjusted to reduce unnecessary load and interruptions.","Настройка системы для снижения лишней нагрузки и задержек."],["ვიდეოკარტის პარამეტრების დაზუსტება კომპიუტერის შესაძლებლობებისა და სათამაშო მიზნების მიხედვით.","Graphics settings tailored to your hardware and gaming goals.","Настройка видеокарты с учётом возможностей ПК и твоих игровых целей."],["თამაშის გრაფიკისა და წარმადობის პარამეტრების ინდივიდუალური მორგება.","Individual tuning of in-game graphics and performance settings.","Индивидуальная настройка графики и производительности в игре."],["ჩვენი პაკეტები.","Our packages.","Наши пакеты."],["აირჩიე შენი ოპტიმიზაციის დონე — საჭირო ცვლილებებიდან სრულ Gaming Setup-მდე.","Choose your level of optimization — from essential tweaks to a complete gaming setup.","Выбери уровень оптимизации — от базовых изменений до полной настройки игрового ПК."],["საჭირო სისტემური ცვლილებები ყოველდღიური და სათამაშო წარმადობის გასაუმჯობესებლად.","Essential system adjustments for everyday use and gaming performance.","Основные системные настройки для повседневной работы и игр."],["/ ერთჯერადად","/ one-time","/ разово"],["Windows-ის საბაზისო ოპტიმიზაცია","Basic Windows optimization","Базовая оптимизация Windows"],["NVIDIA Control Panel-ის გამართვა","NVIDIA Control Panel setup","Настройка панели управления NVIDIA"],["აუცილებელი Performance Tweaks","Essential performance tweaks","Основные настройки производительности"],["შეკვეთა Instagram-ზე ↗","Order on Instagram ↗","Заказать в Instagram ↗"],["გაფართოებული ოპტიმიზაცია და ერთი კონკრეტული თამაშისთვის მორგებული პარამეტრები.","Advanced optimization with settings tailored to one specific game.","Расширенная оптимизация и настройка одной конкретной игры."],["Windows-ის გაფართოებული ოპტიმიზაცია","Advanced Windows optimization","Расширенная оптимизация Windows"],["NVIDIA-ს დეტალური გამართვა","Detailed NVIDIA tuning","Детальная настройка NVIDIA"],["ერთი თამაშის ინდივიდუალური ოპტიმიზაცია","Individual optimization for one game","Индивидуальная оптимизация одной игры"],["სრული განახლება და Gaming გარემოს თავიდან ბოლომდე გამართვა.","A fresh start and complete setup of your gaming environment.","Чистая установка и полная настройка игровой системы."],["Windows-ის სუფთა ინსტალაცია","Clean Windows installation","Чистая установка Windows"],["ინსტალაციის შემდგომი სრული ოპტიმიზაცია","Full post-installation optimization","Полная оптимизация после установки"],["Gaming Setup და Game Tweaks","Gaming setup and game tweaks","Настройка игровой системы и игр"],["ოპტიმიზაციის შედეგი დამოკიდებულია კომპიუტერის კონფიგურაციასა და თამაშზე. კონკრეტული FPS მატება გარანტირებული არ არის.","Results depend on your PC configuration and game. A specific FPS increase is not guaranteed.","Результат зависит от конфигурации ПК и игры. Конкретный прирост FPS не гарантируется."],["მარტივი პროცესი.","Simple process.","Простой процесс."],["შენი წესებით.","On your terms.","На твоих условиях."],["ოპტიმიზაცია უნდა შეესაბამებოდეს კომპიუტერის კონფიგურაციას და იმ თამაშებს, რომლებსაც თამაშობ.","Optimization should fit your hardware and the games you play.","Оптимизация должна учитывать конфигурацию ПК и игры, в которые ты играешь."],["მოგვწერე Instagram-ზე","Message us on Instagram","Напиши нам в Instagram"],["გამოგვიგზავნე კომპიუტერის მონაცემები და გვითხარი, რა პრობლემას აწყდები.","Send your PC specifications and tell us what problems you are having.","Отправь характеристики ПК и расскажи, с какой проблемой столкнулся."],["შეარჩიე პაკეტი","Choose a package","Выбери пакет"],["შენი სისტემისა და მიზნების მიხედვით შევარჩევთ შესაბამის მომსახურებას.","We will select the right service for your system and goals.","Подберём услугу с учётом твоей системы и целей."],["მიიღე ოპტიმიზაცია","Get optimized","Получи оптимизацию"],["შევასრულებთ შეთანხმებულ ცვლილებებს და აგიხსნით შედეგებს.","We will make the agreed adjustments and explain the results.","Выполним согласованные изменения и объясним результаты."],["შედეგები, რომლებსაც","Results you can","Результаты, которые можно"],["შეადარებ.","compare.","сравнить."],["რეალური Before / After ტესტები დაემატება მაშინ, როცა შეგროვდება ერთი და იმავე სისტემაზე, ერთნაირ პირობებში გაზომილი მონაცემები.","Real before-and-after tests will be added once measurements from the same system under identical conditions are available.","Тесты до и после появятся, когда будут собраны измерения на одной системе в одинаковых условиях."],["Before / After შედეგები","Before / after results","Результаты до и после"],["აქ გამოჩნდება თამაშის სახელი, პროცესორისა და ვიდეოკარტის მონაცემები, ტესტის პირობები და ოპტიმიზაციამდე/შემდეგ გაზომილი FPS — მხოლოდ გადამოწმებული შედეგებით.","This section will show the game, CPU and GPU, test conditions and measured FPS before and after optimization — verified results only.","Здесь появятся название игры, процессор и видеокарта, условия теста и замеренный FPS до и после оптимизации — только проверенные результаты."],["შენი თამაშის მიხედვით","Tailored to your game","Под твою игру"],["მაგალითად, შეგვიძლია განვიხილოთ შემდეგი თამაშები. კონკრეტული სისტემის მხარდაჭერასა და მომსახურების მოცულობას წინასწარ ვათანხმებთ.","These are examples of games we can discuss. System compatibility and service scope are agreed in advance.","Вот примеры игр, которые можно обсудить. Поддержку конкретной системы и объём услуги согласуем заранее."],["ხშირად დასმული","Frequently asked","Частые"],["კითხვები.","questions.","вопросы."],["ყველაფერი, რაც ოპტიმიზაციამდე უნდა იცოდე.","What you need to know before optimization.","Что нужно знать перед оптимизацией."],["ყველა კომპიუტერზე ერთნაირი შედეგია?","Are the results the same on every PC?","На всех ПК одинаковый результат?"],["არა. შედეგი დამოკიდებულია კომპონენტებზე, საწყის მდგომარეობასა და თამაშზე. წინასწარ განვიხილავთ შენს სისტემას.","No. Results depend on the hardware, initial system condition and game. We review your system beforehand.","Нет. Результат зависит от комплектующих, исходного состояния и игры. Заранее обсудим твою систему."],["გარანტირებულია FPS-ის მატება?","Is an FPS increase guaranteed?","Гарантирован ли прирост FPS?"],["კონკრეტული FPS-ის მატების გარანტია შეუძლებელია. მიზანია სისტემის სწორად გამართვა და ზედმეტი შეფერხებების შემცირება.","A specific FPS increase cannot be guaranteed. The aim is proper system configuration and fewer unnecessary interruptions.","Конкретный прирост FPS гарантировать нельзя. Цель — правильно настроить систему и уменьшить лишние задержки."],["რომელი თამაშებისთვის აკეთებთ ოპტიმიზაციას?","Which games do you optimize?","Какие игры вы оптимизируете?"],["ძირითადი აქცენტი Gaming-ზეა. მოგვწერე შენი თამაში და კომპიუტერის მონაცემები, რომ შევაფასოთ შესაბამისი პაკეტი.","Our focus is gaming. Send us your game and PC specifications so we can recommend a suitable package.","Мы специализируемся на играх. Напиши название игры и характеристики ПК, чтобы мы подобрали подходящий пакет."],["როგორ შევუკვეთო?","How do I order?","Как заказать?"],["დააჭირე შეკვეთის ღილაკს და მოგვწერე Instagram-ზე: @mgzor.tweaks.","Click an order button and message us on Instagram: @mgzor.tweaks.","Нажми кнопку заказа и напиши нам в Instagram: @mgzor.tweaks."],["დროა შენი PC-მ","Time for your PC","Пора твоему ПК"],["მეტი შეძლოს.","to do more.","раскрыть потенциал."],["მოგვწერე და ერთად შევარჩიოთ სწორი ოპტიმიზაცია.","Message us and we will choose the right optimization together.","Напиши нам — вместе подберём подходящую оптимизацию."],["მთავარი ნავიგაცია","Main navigation","Главная навигация"],["MGZOR TWEAKS — მთავარი","MGZOR TWEAKS — Home","MGZOR TWEAKS — Главная"],["მენიუს გახსნა","Open menu","Открыть меню"],["მენიუს დახურვა","Close menu","Закрыть меню"],["ენის არჩევა","Choose language","Выбрать язык"],["სტილიზებული გრაფიკი, რომელიც აღნიშნავს სისტემის გამართვას","Illustrative system tuning chart","Стилизованный график настройки системы"],["Basic პაკეტის შეკვეთა Instagram-ზე","Order Basic on Instagram","Заказать Basic в Instagram"],["Advanced პაკეტის შეკვეთა Instagram-ზე","Order Advanced on Instagram","Заказать Advanced в Instagram"],["Maximum პაკეტის შეკვეთა Instagram-ზე","Order Maximum on Instagram","Заказать Maximum в Instagram"]];
+ const dictionary=new Map(entries.map(([ka,en,ru])=>[ka,{ka,en,ru}]));
+ const textNodes=[];
+ const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+ while(walker.nextNode()){
+   const node=walker.currentNode;
+   if(node.parentElement.closest('script,style,.language-switch')) continue;
+   const original=node.nodeValue, key=original.trim();
+   if(dictionary.has(key)) textNodes.push({node,original,key});
+ }
+ const attrs=[];
+ document.querySelectorAll('[aria-label]').forEach(el=>{
+   const key=el.getAttribute('aria-label');
+   if(dictionary.has(key)) attrs.push({el,key});
+ });
+ const priceNodes=[...document.querySelectorAll('.amount')].map(el=>el.firstChild);
+ const prices={ka:['20₾','30₾','45₾'],en:['$7','$12','$20'],ru:['700 ₽','1000 ₽','1500 ₽']};
+ const descriptions={
+ ka:'MGZOR TWEAKS — Windows, NVIDIA და Gaming ოპტიმიზაცია. აირჩიე Basic, Advanced ან Maximum პაკეტი და მოგვწერე Instagram-ზე.',
+ en:'MGZOR TWEAKS — Windows, NVIDIA and game optimization. Choose Basic, Advanced or Maximum and contact us on Instagram.',
+ ru:'MGZOR TWEAKS — оптимизация Windows, NVIDIA и игр. Выбери Basic, Advanced или Maximum и напиши нам в Instagram.'
+ };
+ function setLanguage(lang){
+   if(!prices[lang]) lang='ka';
+   document.documentElement.lang=lang;
+   textNodes.forEach(({node,original,key})=>{node.nodeValue=original.replace(key,dictionary.get(key)[lang]);});
+   attrs.forEach(({el,key})=>el.setAttribute('aria-label',dictionary.get(key)[lang]));
+   priceNodes.forEach((node,i)=>{node.nodeValue=prices[lang][i]+' ';});
+   document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===lang)));
+   const menu=document.getElementById('menu-button');
+   const open=menu.getAttribute('aria-expanded')==='true';
+   menu.setAttribute('aria-label',dictionary.get(open?'მენიუს დახურვა':'მენიუს გახსნა')[lang]);
+   document.querySelector('meta[name="description"]').content=descriptions[lang];
+   document.querySelector('meta[property="og:description"]').content=descriptions[lang];
+   document.title={ka:'MGZOR — კომპიუტერის ოპტიმიზაცია',en:'MGZOR — PC Optimization',ru:'MGZOR — Оптимизация ПК'}[lang];
+ }
+ document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.language)));
+ document.getElementById('menu-button').addEventListener('click',()=>{
+   const lang=document.documentElement.lang;
+   const open=document.getElementById('menu-button').getAttribute('aria-expanded')==='true';
+   document.getElementById('menu-button').setAttribute('aria-label',dictionary.get(open?'მენიუს დახურვა':'მენიუს გახსნა')[lang]);
+ });
+ document.querySelectorAll('#nav-links a').forEach(link=>link.addEventListener('click',()=>{
+   document.getElementById('menu-button').setAttribute('aria-label',dictionary.get('მენიუს გახსნა')[document.documentElement.lang]);
+ }));
+ // Every fresh visit starts in Georgian, independently of browser language.
+ setLanguage('ka');
+ window.mgzorSetLanguage=setLanguage;
+})();
+</script>
 </body>
 </html>
