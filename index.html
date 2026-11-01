@@ -149,6 +149,12 @@
 .cta-panel>div,.cta-panel>.button{position:relative;z-index:1}
 @media(max-width:800px){.cta-panel::after{right:-25px;width:280px;height:220px;opacity:.045}}
 @media(max-width:480px){.cta-panel::after{right:-40px;width:235px;height:190px}}
+
+/* Align the contact button with the center of the background brand mark. */
+.cta-panel{display:grid;grid-template-columns:minmax(0,1fr) 330px}
+.cta-panel>.button{justify-self:center}
+.cta-panel::after{right:60px}
+@media(max-width:800px){.cta-panel{display:flex}.cta-panel>.button{align-self:center}.cta-panel::after{right:50%;transform:translate(50%,-50%)}}
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
 </head>
