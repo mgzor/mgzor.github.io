@@ -155,6 +155,21 @@
 .cta-panel>.button{justify-self:center}
 .cta-panel::after{right:60px}
 @media(max-width:800px){.cta-panel{display:flex}.cta-panel>.button{align-self:center}.cta-panel::after{right:50%;transform:translate(50%,-50%)}}
+
+/* Frosted glass pricing with an oversized title behind the cards. */
+#services{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#ffffff0a,transparent 65%),#09090a}
+#services .pricing-intro{display:flex;flex-direction:column;align-items:center;position:relative;margin-bottom:-48px}
+#services .pricing-intro .eyebrow{order:0}
+#services .pricing-intro>p{order:1;max-width:650px;margin:16px auto 28px!important}
+#services .pricing-intro h2{order:2;font-size:clamp(62px,8.3vw,116px);font-weight:800;letter-spacing:-5px;line-height:1.15;margin:0;white-space:nowrap;color:#e4e4e8}
+#services .price-grid{position:relative;z-index:2;gap:22px}
+#services .price-card{background:linear-gradient(145deg,#ffffff0b,#ffffff03 65%);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid #ffffff24;border-top-color:#ffffff42;box-shadow:inset 0 1px 2px #ffffff12,inset 0 -1px 12px #ffffff05,0 20px 55px #0005;border-radius:22px;padding-top:36px}
+#services .price-card.popular{background:linear-gradient(145deg,#ffffff15,#ffffff05 65%);border-color:#ffffff50;box-shadow:inset 0 1px 2px #ffffff24,0 22px 65px #0006}
+#services .price-card:hover{background:linear-gradient(145deg,#ffffff16,#ffffff07 65%);border-color:#ffffff70}
+#services .price-card .desc{color:#bdbdc5}
+#services .pricing-foot{position:relative;z-index:2}
+@media(max-width:800px){#services .pricing-intro{margin-bottom:-28px}#services .pricing-intro h2{font-size:clamp(42px,8.5vw,68px);letter-spacing:-2.5px}#services .price-grid{gap:20px}#services .pricing-intro>p{margin-bottom:24px!important;font-size:14px}}
+@media(max-width:480px){#services .pricing-intro h2{font-size:clamp(30px,8.2vw,42px);letter-spacing:-1.5px}#services .pricing-intro{margin-bottom:-16px}#services .price-card{padding-top:32px}}
 </style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
 </head>
