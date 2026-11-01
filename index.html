@@ -142,7 +142,14 @@
       .hero-art .orbit{width:min(80vw,290px)}
       .hero-art .orbit.two{width:min(65vw,230px)}
     }
-  .language-switch{display:flex;flex-shrink:0;gap:2px;padding:4px;border:1px solid var(--line);border-radius:100px;background:#111113}.language-switch button{border:0;background:transparent;color:#a2a2aa;padding:7px 9px;border-radius:100px;font:700 12px Inter,sans-serif;cursor:pointer;min-height:32px}.language-switch button[aria-pressed="true"]{background:#f5f5f6;color:#09090b}.header-inner{gap:14px}.nav-links{gap:18px}html[lang="ru"] .hero h1,html[lang="en"] .hero h1{font-family:Inter,sans-serif;letter-spacing:-2px;font-size:clamp(38px,4.7vw,67px)}@media(max-width:1100px){.nav-action{display:none}}@media(max-width:480px){.header-inner{gap:8px}.logo img{width:125px!important;max-width:32vw!important}.language-switch{margin-left:auto}.language-switch button{padding:6px 7px}.menu-button{padding:7px 9px}html[lang="ru"] .hero h1,html[lang="en"] .hero h1{font-size:clamp(34px,9vw,46px);letter-spacing:-1.3px}}</style>
+  .language-switch{display:flex;flex-shrink:0;gap:2px;padding:4px;border:1px solid var(--line);border-radius:100px;background:#111113}.language-switch button{border:0;background:transparent;color:#a2a2aa;padding:7px 9px;border-radius:100px;font:700 12px Inter,sans-serif;cursor:pointer;min-height:32px}.language-switch button[aria-pressed="true"]{background:#f5f5f6;color:#09090b}.header-inner{gap:14px}.nav-links{gap:18px}html[lang="ru"] .hero h1,html[lang="en"] .hero h1{font-family:Inter,sans-serif;letter-spacing:-2px;font-size:clamp(38px,4.7vw,67px)}@media(max-width:1100px){.nav-action{display:none}}@media(max-width:480px){.header-inner{gap:8px}.logo img{width:125px!important;max-width:32vw!important}.language-switch{margin-left:auto}.language-switch button{padding:6px 7px}.menu-button{padding:7px 9px}html[lang="ru"] .hero h1,html[lang="en"] .hero h1{font-size:clamp(34px,9vw,46px);letter-spacing:-1.3px}}
+/* Brand marks replacing decorative stars */
+.hero-art .system-icon .mgzor-brand-mark{width:128px;height:105px;animation:none;filter:drop-shadow(0 0 15px #ffffff22)}
+.cta-panel::after{content:"";right:3%;top:50%;width:330px;height:250px;transform:translateY(-50%);background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%22310%20199%20915%20655%22%3E%3Cpath%20fill%3D%22%23f5f5f6%22%20fill-rule%3D%22evenodd%22%20d%3D%22M1008%2C505%20923%2C547%20769%2C629%20754%2C623%20680%2C582%20572%2C527%20528%2C509%20646%2C624%20768%2C733%20893%2C620Z%20M342%2C230%20342%2C823%20451%2C737%20452%2C393%20767%2C586%20887%2C509%201085%2C387%201084%2C737%201193%2C823%201193%2C230%201176%2C231%201159%2C235%201054%2C285%20767%2C472%20492%2C290%20379%2C237%20364%2C232Z%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat;opacity:.055;pointer-events:none}
+.cta-panel>div,.cta-panel>.button{position:relative;z-index:1}
+@media(max-width:800px){.cta-panel::after{right:-25px;width:280px;height:220px;opacity:.045}}
+@media(max-width:480px){.cta-panel::after{right:-40px;width:235px;height:190px}}
+</style>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=4">
 </head>
 <body>
@@ -176,7 +183,7 @@
             <div class="system-card">
               <div class="system-top"><strong>MGZOR / SYSTEM</strong><span class="system-pill">OPTIMIZATION</span></div>
               <div class="system-icon">
-                <svg viewBox="0 0 160 160" role="presentation"><defs><linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".55" stop-color="#888"/><stop offset="1" stop-color="#f5f5f5"/></linearGradient></defs><circle cx="80" cy="80" r="67" fill="none" stroke="#fff" stroke-opacity=".12"/><circle cx="80" cy="80" r="51" fill="none" stroke="#fff" stroke-opacity=".16"/><path d="M80 25 L91 67 L135 80 L91 92 L80 135 L68 92 L25 80 L68 67 Z" fill="url(#shine)"/><circle cx="80" cy="80" r="8" fill="#fff"/></svg>
+<svg class="mgzor-brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="310 199 915 655"><path fill="#f5f5f6" fill-rule="evenodd" d="M1008,505 923,547 769,629 754,623 680,582 572,527 528,509 646,624 768,733 893,620Z M342,230 342,823 451,737 452,393 767,586 887,509 1085,387 1084,737 1193,823 1193,230 1176,231 1159,235 1054,285 767,472 492,290 379,237 364,232Z"/></svg>
               </div>
               <div class="system-meta">TUNING WORKFLOW</div>
               <div class="meter"><b>WINDOWS</b><span class="meter-track"><span class="meter-fill" style="display:block;--meter-target:85%"></span></span></div>
