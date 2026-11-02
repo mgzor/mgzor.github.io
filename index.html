@@ -301,7 +301,45 @@ html[data-theme=light] .calc-mini-head,html[data-theme=light] .calc-mini-fps spa
 .price-card.popular{overflow:visible;padding-top:66px}
 .price-card.popular .plan-badge,html[data-theme="light"] .price-card.popular .plan-badge{position:absolute;top:-1px;right:-1px;left:auto;transform:none;min-width:158px;padding:13px 21px;border-radius:0 22px 0 24px;background:linear-gradient(125deg,rgba(216,172,244,.86),rgba(164,122,218,.80));color:#21132e;text-align:center;font:800 14px/1.4 Inter,sans-serif;letter-spacing:0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 7px 22px #b28bdb20,inset 0 1px 0 #ffffff35}
 .price-grid{padding-top:10px}
-</style></head>
+</style><style id="benchmark-preview-style">
+.benchmark-card{padding:32px!important}
+.benchmark-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.benchmark-package{font:700 10px Inter,sans-serif;letter-spacing:1px;border:1px solid var(--line);border-radius:30px;padding:6px 12px;color:var(--text)}
+.benchmark-card h3{font-size:23px!important;margin:24px 0 12px!important}
+.benchmark-specs{font-size:13px!important;line-height:1.9!important}
+.benchmark-settings{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;margin:15px 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:13px}
+.benchmark-settings span{font:600 9px Inter,sans-serif;letter-spacing:1.4px;color:var(--muted)}
+.benchmark-row{margin:20px 0}
+.benchmark-label{font-size:12px;color:var(--muted)}
+.benchmark-value{font:700 clamp(29px,4vw,44px)/1.3 Inter,sans-serif;letter-spacing:-1.5px;margin:7px 0 11px}
+.benchmark-value small{font-size:11px;letter-spacing:1px;font-weight:500;color:var(--muted)}
+.benchmark-track{height:7px;background:#ffffff12;border-radius:8px;overflow:hidden}
+.benchmark-track i{display:block;height:100%;border-radius:8px;background:#73737d}
+.benchmark-after .benchmark-track i{background:linear-gradient(90deg,#c6c6d0,#f5f5f6)}
+.benchmark-note{display:flex;align-items:baseline;gap:8px;font-size:11px;margin-top:25px;color:var(--text)}
+.benchmark-dot{width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0}
+.benchmark-source{font-size:10px!important;line-height:1.8!important;margin:9px 0 0!important;color:var(--muted)!important}
+html[data-theme=light] .benchmark-track{background:#0000000c}
+html[data-theme=light] .benchmark-after .benchmark-track i{background:linear-gradient(90deg,#7b79a0,#343344)}
+html[data-theme=light] .benchmark-track i{background:#b9bac6}
+@media(max-width:480px){.benchmark-card{padding:24px!important}.benchmark-card h3{font-size:20px!important}}
+</style>
+<style id="gaming-focus-preview-style">
+.gaming-panel{display:flex;flex-direction:column}
+.focus-checks{margin-top:29px;border-top:1px solid var(--line);padding-top:22px}
+.focus-caption{font-size:10px;letter-spacing:1px;color:var(--muted);margin-bottom:7px}
+.focus-item{display:flex;align-items:center;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}
+.focus-index{font:500 11px Inter,sans-serif;color:var(--muted);align-self:flex-start;margin-top:5px}
+.focus-item>div{flex:1;min-width:0}
+.focus-item h4{font-size:14px;line-height:1.5;margin:0 0 4px;font-weight:650;color:var(--text)}
+.focus-item p{font-size:11px!important;line-height:1.8!important;margin:0!important;color:var(--muted)!important}
+.focus-icon{display:flex;align-items:center;justify-content:center;width:34px;height:34px;flex-shrink:0;border:1px solid var(--line);border-radius:10px;font:500 22px Inter,sans-serif;color:var(--text);background:#ffffff04}
+.focus-bottom{margin-top:auto;padding-top:25px}
+.focus-bottom p{font-size:12px!important;margin:0 0 12px!important}
+.focus-cta{width:100%;font-size:12px!important;justify-content:space-between!important;min-height:45px!important}
+@media(max-width:480px){.focus-item{gap:10px}.focus-item h4{font-size:13px}}
+</style>
+</head>
 <body>
   <a class="skip" href="#main">გადადი მთავარ შინაარსზე</a>
   <header class="site-header">
@@ -398,9 +436,24 @@ html[data-theme=light] .calc-mini-head,html[data-theme=light] .calc-mini-fps spa
         </div></div></section>
 
     <section class="section section-alt" id="results">
-      <div class="container"><div class="section-head reveal"><div class="eyebrow">PERFORMANCE RESULTS</div><h2>შედეგები, რომლებსაც<br>შეადარებ.</h2><p>რეალური Before / After ტესტები დაემატება მაშინ, როცა შეგროვდება ერთი და იმავე სისტემაზე, ერთნაირ პირობებში გაზომილი მონაცემები.</p></div>
-        <div class="outcome-grid"><div class="outcome-panel reveal"><span class="empty"><span class="circle"></span> REAL BENCHMARKS • COMING SOON</span><h3>Before / After შედეგები</h3><p>აქ გამოჩნდება თამაშის სახელი, პროცესორისა და ვიდეოკარტის მონაცემები, ტესტის პირობები და ოპტიმიზაციამდე/შემდეგ გაზომილი FPS — მხოლოდ გადამოწმებული შედეგებით.</p></div>
-          <div class="outcome-panel reveal"><span class="eyebrow">GAMING FOCUS</span><h3>შენი თამაშის მიხედვით</h3><p>მაგალითად, შეგვიძლია განვიხილოთ შემდეგი თამაშები. კონკრეტული სისტემის მხარდაჭერასა და მომსახურების მოცულობას წინასწარ ვათანხმებთ.</p><div class="games-bar"><span class="game-chip">CS2</span><span class="game-chip">PUBG</span><span class="game-chip">VALORANT</span><span class="game-chip">FORTNITE</span><span class="game-chip">GTA V</span></div></div></div>
+      <div class="container"><div class="section-head reveal"><div class="eyebrow">PERFORMANCE RESULTS</div><h2>შედეგები, რომლებსაც<br>შეადარებ.</h2><p data-bench-intro>ერთი სისტემის Before / After შედარება ერთნაირ სატესტო პირობებში</p></div>
+        <div class="outcome-grid"><div class="outcome-panel reveal benchmark-card">
+<div class="benchmark-top"><span class="eyebrow">COUNTER-STRIKE 2</span><span class="benchmark-package">ADVANCED</span></div>
+<h3 data-bench="title">შენი სისტემის რეალური მაგალითი</h3>
+<p class="benchmark-specs">AMD Ryzen 5 7600<br>NVIDIA RTX 3060 12GB<br>16 GB RAM · Single Channel</p>
+<div class="benchmark-settings">1280 × 960 <span>LOW SETTINGS</span></div>
+<div class="benchmark-row"><div class="benchmark-label" data-bench="before">ოპტიმიზაციამდე</div><div class="benchmark-value">230–250 <small>FPS</small></div><div class="benchmark-track"><i style="width:53.33%"></i></div></div>
+<div class="benchmark-row benchmark-after"><div class="benchmark-label" data-bench="after">ოპტიმიზაციის შემდეგ</div><div class="benchmark-value">400–450 <small>FPS</small></div><div class="benchmark-track"><i style="width:94.44%"></i></div></div>
+<div class="benchmark-note"><span class="benchmark-dot"></span><span data-bench="conditions">იგივე რუკა / benchmark და გრაფიკული პარამეტრები</span></div>
+<p class="benchmark-source" data-bench="source">მომსახურების გამწევის მიერ მოწოდებული FPS-ის დიაპაზონები · შედეგი ინდივიდუალურია</p>
+</div>
+          <div class="outcome-panel reveal gaming-panel"><span class="eyebrow">GAMING FOCUS</span><h3>შენი თამაშის მიხედვით</h3><p>მაგალითად, შეგვიძლია განვიხილოთ შემდეგი თამაშები. კონკრეტული სისტემის მხარდაჭერასა და მომსახურების მოცულობას წინასწარ ვათანხმებთ.</p><div class="games-bar"><span class="game-chip">CS2</span><span class="game-chip">PUBG</span><span class="game-chip">VALORANT</span><span class="game-chip">FORTNITE</span><span class="game-chip">GTA V</span></div>
+<div class="focus-checks"><div class="focus-caption" data-focus="caption">რას ვაკვირდებით</div>
+<div class="focus-item"><span class="focus-index">01</span><div><h4 data-focus="fps">FPS-ის წარმადობა</h4><p data-focus="fpsdesc">სისტემისა და თამაშის პარამეტრების შესაბამისობა</p></div><span class="focus-icon" aria-hidden="true">↗</span></div>
+<div class="focus-item"><span class="focus-index">02</span><div><h4 data-focus="frames">კადრების სტაბილურობა</h4><p data-focus="framesdesc">შეფერხებები და FPS-ის მკვეთრი ვარდნები</p></div><span class="focus-icon" aria-hidden="true">≋</span></div>
+<div class="focus-item"><span class="focus-index">03</span><div><h4 data-focus="input">მართვის რეაგირება</h4><p data-focus="inputdesc">Input lag-ზე მოქმედი პარამეტრები</p></div><span class="focus-icon" aria-hidden="true">⌁</span></div></div>
+<div class="focus-bottom"><p data-focus="question">რა უშლის ხელს შენს თამაშს?</p><a class="button button-outline focus-cta" href="https://www.instagram.com/mgzor.tweaks/" target="_blank" rel="noopener noreferrer"><span data-focus="cta">მოგვწერე შენი მონაცემები</span><span aria-hidden="true">↗</span></a></div>
+</div></div>
       </div>
     </section>
 
@@ -527,6 +580,23 @@ html[data-theme=light] .calc-mini-head,html[data-theme=light] .calc-mini-fps spa
       .observe(heading, { subtree: true, childList: true, characterData: true });
   });
 })();
+</script>
+<script>
+(function(){
+const labels={
+ka:{title:'შენი სისტემის რეალური მაგალითი',before:'ოპტიმიზაციამდე',after:'ოპტიმიზაციის შემდეგ',conditions:'იგივე რუკა / benchmark და გრაფიკული პარამეტრები',source:'მომსახურების გამწევის მიერ მოწოდებული FPS-ის დიაპაზონები · შედეგი ინდივიდუალურია'},
+en:{title:'A real system example',before:'Before optimization',after:'After optimization',conditions:'Same map / benchmark and graphics settings',source:'FPS ranges reported by the service provider · Results vary by system'},
+ru:{title:'Пример реальной системы',before:'До оптимизации',after:'После оптимизации',conditions:'Одинаковая карта / бенчмарк и настройки графики',source:'Диапазоны FPS предоставлены исполнителем · Результат индивидуален'}
+};
+function sync(){const l=labels[document.documentElement.lang]||labels.ka;document.querySelectorAll('[data-bench]').forEach(e=>e.textContent=l[e.dataset.bench]);}
+sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+})();
+</script>
+<script>
+(()=>{const copy={ka:{caption:'რას ვაკვირდებით',fps:'FPS-ის წარმადობა',fpsdesc:'სისტემისა და თამაშის პარამეტრების შესაბამისობა',frames:'კადრების სტაბილურობა',framesdesc:'შეფერხებები და FPS-ის მკვეთრი ვარდნები',input:'მართვის რეაგირება',inputdesc:'Input lag-ზე მოქმედი პარამეტრები',question:'რა უშლის ხელს შენს თამაშს?',cta:'მოგვწერე შენი მონაცემები'},en:{caption:'WHAT WE LOOK AT',fps:'FPS performance',fpsdesc:'Matching game settings to your system',frames:'Frame consistency',framesdesc:'Stutters and sudden FPS drops',input:'Input response',inputdesc:'Settings that affect input lag',question:'What is holding your game back?',cta:'Send us your PC specs'},ru:{caption:'НА ЧТО ОБРАЩАЕМ ВНИМАНИЕ',fps:'Производительность FPS',fpsdesc:'Соответствие настроек игры твоей системе',frames:'Стабильность кадров',framesdesc:'Подтормаживания и резкие просадки FPS',input:'Отзывчивость управления',inputdesc:'Параметры, влияющие на задержку ввода',question:'Что мешает твоей игре?',cta:'Отправь нам характеристики ПК'}};function sync(){const c=copy[document.documentElement.lang]||copy.ka;document.querySelectorAll('[data-focus]').forEach(e=>e.textContent=c[e.dataset.focus]);}sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});})();
+</script>
+<script id="benchmark-intro-language">
+(function(){var t={ka:'ერთი სისტემის Before / After შედარება ერთნაირ სატესტო პირობებში',en:'Before / After results from one system under the same test conditions',ru:'Сравнение до и после на одной системе в одинаковых условиях тестирования'};function sync(){var e=document.querySelector('[data-bench-intro]');if(e)e.textContent=t[document.documentElement.lang]||t.ka;}sync();new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});})();
 </script>
 </body>
 </html>
