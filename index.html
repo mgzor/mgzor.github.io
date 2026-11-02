@@ -473,6 +473,7 @@ html[data-theme=light] .calc-mini-head,html[data-theme=light] .calc-mini-fps spa
  };
  function setLanguage(lang){
    if(!prices[lang]) lang='ka';
+   try{localStorage.setItem('mgzor-language',lang)}catch(e){}
    document.documentElement.lang=lang;
    textNodes.forEach(({node,original,key})=>{node.nodeValue=original.replace(key,dictionary.get(key)[lang]);});
    attrs.forEach(({el,key})=>el.setAttribute('aria-label',dictionary.get(key)[lang]));
@@ -494,8 +495,9 @@ html[data-theme=light] .calc-mini-head,html[data-theme=light] .calc-mini-fps spa
  document.querySelectorAll('#nav-links a').forEach(link=>link.addEventListener('click',()=>{
    document.getElementById('menu-button').setAttribute('aria-label',dictionary.get('მენიუს გახსნა')[document.documentElement.lang]);
  }));
- // Every fresh visit starts in Georgian, independently of browser language.
- setLanguage('ka');
+ // Keep the selected language across the home page and calculator.
+ let savedLanguage;try{savedLanguage=localStorage.getItem('mgzor-language')}catch(e){}
+ setLanguage(['ka','en','ru'].includes(savedLanguage)?savedLanguage:'ka');
  window.mgzorSetLanguage=setLanguage;
 })();
 </script>
