@@ -301,22 +301,7 @@ html[data-theme=light] .calc-mini-head,html[data-theme=light] .calc-mini-fps spa
 .price-card.popular{overflow:visible;padding-top:66px}
 .price-card.popular .plan-badge,html[data-theme="light"] .price-card.popular .plan-badge{position:absolute;top:-1px;right:-1px;left:auto;transform:none;min-width:158px;padding:13px 21px;border-radius:0 22px 0 24px;background:linear-gradient(125deg,rgba(216,172,244,.86),rgba(164,122,218,.80));color:#21132e;text-align:center;font:800 14px/1.4 Inter,sans-serif;letter-spacing:0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 7px 22px #b28bdb20,inset 0 1px 0 #ffffff35}
 .price-grid{padding-top:10px}
-</style>
-<style id="interactive-hover-buttons">
-/* Equivalent of InteractiveHoverButton for the existing buildless site. */
-a.button.ihb{position:relative;isolation:isolate;overflow:hidden;gap:0;transform:none;transition:border-color .3s,box-shadow .3s;--ihb-fill:#f5f5f6;--ihb-ink:#101012;background:transparent;color:var(--text);border-color:var(--line)}
-a.button.ihb::before{content:"";position:absolute;z-index:-1;left:20%;top:calc(50% - 4px);width:8px;height:8px;border-radius:8px;background:var(--ihb-fill);transition:left .3s,top .3s,width .3s,height .3s,transform .3s}
-.ihb-original{display:inline-block;transform:translateX(4px);transition:transform .3s,opacity .3s}
-.ihb-original>[aria-hidden]{display:none}
-a.button.ihb::after{content:attr(data-hover-label) " →";position:absolute;z-index:1;inset:0;display:flex;align-items:center;justify-content:center;padding:12px 23px;white-space:nowrap;color:var(--ihb-ink);opacity:0;transform:translateX(48px);transition:transform .3s,opacity .3s;pointer-events:none}
-a.button.ihb:is(:hover,:focus-visible){background:transparent;transform:none}
-a.button.ihb:is(:hover,:focus-visible)::before{left:0;top:0;width:100%;height:100%;transform:scale(1.8)}
-a.button.ihb:is(:hover,:focus-visible) .ihb-original{transform:translateX(48px);opacity:0}
-a.button.ihb:is(:hover,:focus-visible)::after{transform:translateX(0);opacity:1}
-html[data-theme="light"] a.button.ihb{--ihb-fill:#19191d;--ihb-ink:#fff;background:transparent;color:#19191d;border-color:#0005}
-@media(prefers-reduced-motion:reduce){a.button.ihb::before,a.button.ihb::after,.ihb-original{transition:none}}
-</style>
-</head>
+</style></head>
 <body>
   <a class="skip" href="#main">გადადი მთავარ შინაარსზე</a>
   <header class="site-header">
@@ -523,23 +508,6 @@ html[data-theme="light"] a.button.ihb{--ihb-fill:#19191d;--ihb-ink:#fff;backgrou
 })();
 </script>
 <script>(()=>{const b=document.querySelector('.theme-toggle');function setTheme(t){document.documentElement.dataset.theme=t;const light=t==='light';b.setAttribute('aria-pressed',String(light));b.setAttribute('aria-label',light?'მუქ რეჟიმზე გადართვა':'ღია რეჟიმზე გადართვა');try{localStorage.setItem('mgzor-theme',t)}catch(e){}}let saved;try{saved=localStorage.getItem('mgzor-theme')}catch(e){}setTheme(saved==='light'?'light':'dark');b.addEventListener('click',()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));})();</script>
-<script>(()=>{const el=document.querySelector('.calculator-teaser');const original={};el.querySelectorAll('[data-calc-copy]').forEach(n=>original[n.dataset.calcCopy]=n.innerHTML);const copy={en:{badge:'Try it online ↗',title:'How much FPS can<br>your PC deliver?',description:'Choose your hardware, game and package — compare estimated FPS before and after optimization.',button:'Calculate your FPS',note:'Illustrative estimate · actual results may vary'},ru:{badge:'Попробуй онлайн ↗',title:'На какой FPS способен<br>твой компьютер?',description:'Выбери комплектующие, игру и пакет — сравни примерный FPS до и после оптимизации.',button:'Рассчитать свой FPS',note:'Иллюстративная оценка · реальный результат может отличаться'}};function translate(){const d=copy[document.documentElement.lang]||original;el.querySelectorAll('[data-calc-copy]').forEach(n=>n.innerHTML=d[n.dataset.calcCopy])}new MutationObserver(translate).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});translate()})();</script>
-<script id="interactive-hover-buttons-init">
-(function(){
-  document.querySelectorAll('a.button').forEach(function(button){
-    var label=document.createElement('span');
-    label.className='ihb-original';
-    while(button.firstChild) label.appendChild(button.firstChild);
-    button.appendChild(label);
-    button.classList.add('ihb');
-    function syncLabel(){
-      button.dataset.hoverLabel=label.textContent.replace(/[↗→]/g,'').trim();
-    }
-    syncLabel();
-    new MutationObserver(syncLabel).observe(label,{subtree:true,childList:true,characterData:true});
-  });
-})();
-</script>
-</body>
+<script>(()=>{const el=document.querySelector('.calculator-teaser');const original={};el.querySelectorAll('[data-calc-copy]').forEach(n=>original[n.dataset.calcCopy]=n.innerHTML);const copy={en:{badge:'Try it online ↗',title:'How much FPS can<br>your PC deliver?',description:'Choose your hardware, game and package — compare estimated FPS before and after optimization.',button:'Calculate your FPS',note:'Illustrative estimate · actual results may vary'},ru:{badge:'Попробуй онлайн ↗',title:'На какой FPS способен<br>твой компьютер?',description:'Выбери комплектующие, игру и пакет — сравни примерный FPS до и после оптимизации.',button:'Рассчитать свой FPS',note:'Иллюстративная оценка · реальный результат может отличаться'}};function translate(){const d=copy[document.documentElement.lang]||original;el.querySelectorAll('[data-calc-copy]').forEach(n=>n.innerHTML=d[n.dataset.calcCopy])}new MutationObserver(translate).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});translate()})();</script></body>
 </html>
 
