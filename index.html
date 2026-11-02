@@ -508,6 +508,26 @@ html[data-theme=light] .calc-mini-head,html[data-theme=light] .calc-mini-fps spa
 })();
 </script>
 <script>(()=>{const b=document.querySelector('.theme-toggle');function setTheme(t){document.documentElement.dataset.theme=t;const light=t==='light';b.setAttribute('aria-pressed',String(light));b.setAttribute('aria-label',light?'მუქ რეჟიმზე გადართვა':'ღია რეჟიმზე გადართვა');try{localStorage.setItem('mgzor-theme',t)}catch(e){}}let saved;try{saved=localStorage.getItem('mgzor-theme')}catch(e){}setTheme(saved==='light'?'light':'dark');b.addEventListener('click',()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark'));})();</script>
-<script>(()=>{const el=document.querySelector('.calculator-teaser');const original={};el.querySelectorAll('[data-calc-copy]').forEach(n=>original[n.dataset.calcCopy]=n.innerHTML);const copy={en:{badge:'Try it online ↗',title:'How much FPS can<br>your PC deliver?',description:'Choose your hardware, game and package — compare estimated FPS before and after optimization.',button:'Calculate your FPS',note:'Illustrative estimate · actual results may vary'},ru:{badge:'Попробуй онлайн ↗',title:'На какой FPS способен<br>твой компьютер?',description:'Выбери комплектующие, игру и пакет — сравни примерный FPS до и после оптимизации.',button:'Рассчитать свой FPS',note:'Иллюстративная оценка · реальный результат может отличаться'}};function translate(){const d=copy[document.documentElement.lang]||original;el.querySelectorAll('[data-calc-copy]').forEach(n=>n.innerHTML=d[n.dataset.calcCopy])}new MutationObserver(translate).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});translate()})();</script></body>
+<script>(()=>{const el=document.querySelector('.calculator-teaser');const original={};el.querySelectorAll('[data-calc-copy]').forEach(n=>original[n.dataset.calcCopy]=n.innerHTML);const copy={en:{badge:'Try it online ↗',title:'How much FPS can<br>your PC deliver?',description:'Choose your hardware, game and package — compare estimated FPS before and after optimization.',button:'Calculate your FPS',note:'Illustrative estimate · actual results may vary'},ru:{badge:'Попробуй онлайн ↗',title:'На какой FPS способен<br>твой компьютер?',description:'Выбери комплектующие, игру и пакет — сравни примерный FPS до и после оптимизации.',button:'Рассчитать свой FPS',note:'Иллюстративная оценка · реальный результат может отличаться'}};function translate(){const d=copy[document.documentElement.lang]||original;el.querySelectorAll('[data-calc-copy]').forEach(n=>n.innerHTML=d[n.dataset.calcCopy])}new MutationObserver(translate).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});translate()})();</script>
+<script id="clean-heading-punctuation">
+(function () {
+  // Run after translation setup so all existing language mappings stay intact.
+  function cleanHeading(heading) {
+    var walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      var cleaned = node.data.replace(/[.,]/g, '');
+      if (node.data !== cleaned) node.data = cleaned;
+    }
+  }
+  document.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(function (heading) {
+    cleanHeading(heading);
+    // Also clean labels when a language switch rewrites heading contents.
+    new MutationObserver(function () { cleanHeading(heading); })
+      .observe(heading, { subtree: true, childList: true, characterData: true });
+  });
+})();
+</script>
+</body>
 </html>
 
